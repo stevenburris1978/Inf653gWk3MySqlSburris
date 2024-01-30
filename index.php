@@ -2,7 +2,7 @@
 require('database.php');
 
 // PUT the SQL QUERY HERE
-$query = 'SELECT c.customerID, c.emailAddress, c.firstName, c.lastName, a.line1, a.city, a.state, a.zipCode, a.phone
+$query = 'SELECT  DISTINCT c.customerID, c.emailAddress, c.firstName, c.lastName, a.line1, a.city, a.state, a.zipCode, a.phone
             FROM customers AS c
             INNER JOIN addresses AS a ON c.customerID = a.customerID';
 
